@@ -1,0 +1,103 @@
+buwebdev\web-340\week-5\pie-baker> npm test
+
+> pie-baker@1.0.0 test
+> jest
+
+ FAIL  test/pie.spec.js
+  × Success all ingredients are there. (4 ms)
+
+  ● Success all ingredients are there.
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Success: Apple Pie Ready"
+    Received: undefined
+
+      13 | test("Success all ingredients are there.", () => {
+      14 |   const result = bakePie("apple", ["flour", "sugar", "butter", "apples"]);
+    > 15 |   expect(result).toBe("Success: Apple Pie Ready");
+         |                  ^
+      16 | });
+
+      at Object.toBe (test/pie.spec.js:15:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        2.017 s
+Ran all test suites.
+buwebdev\web-340\week-5\pie-baker> npm test
+
+> pie-baker@1.0.0 test
+> jest
+
+ PASS  test/pie.spec.js
+  √ Success all ingredients are there. (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.346 s, estimated 2 s
+Ran all test suites.
+buwebdev\web-340\week-5\pie-baker> npm test
+
+> pie-baker@1.0.0 test
+> jest
+
+ FAIL  test/pie.spec.js
+  √ Success on all ingredients present (2 ms)
+  × Fail on missing ingredients (2 ms)
+
+  ● Fail on missing ingredients
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Missing essential ingredient"
+
+    Number of calls: 0
+
+      27 |
+      28 |   // check if console.warn or exit process was called/executed
+    > 29 |   expect(mockWarn).toHaveBeenCalledWith("Missing essential ingredient");
+         |                    ^
+      30 |   expect(mockExit).toHaveBeenCalledWith(1);
+      31 |
+      32 |   // restores default behaviors
+
+      at Object.toHaveBeenCalledWith (test/pie.spec.js:29:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.376 s, estimated 1 s
+Ran all test suites.
+buwebdev\web-340\week-5\pie-baker> npm test
+
+> pie-baker@1.0.0 test
+> jest
+
+ PASS  test/pie.spec.js
+  √ Success on all ingredients present (2 ms)
+  √ Fail on missing ingredients (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        0.349 s, estimated 1 s
+Ran all test suites.
+buwebdev\web-340\week-5\pie-baker> npm test
+
+> pie-baker@1.0.0 test
+> jest
+
+ PASS  test/pie.spec.js
+  √ Success on all ingredients present (2 ms)
+  √ Fail on missing ingredients (2 ms)
+  √ Fail on NO ingredients (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.357 s, estimated 1 s
+Ran all test suites.
+buwebdev\web-340\week-5\pie-baker>
